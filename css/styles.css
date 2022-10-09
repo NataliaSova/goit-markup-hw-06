@@ -166,12 +166,27 @@ textarea{
     padding-bottom: 40px;
    
 }
-.modal-div{
-    justify-content: center;
+.modal-div{   
+     justify-content: center;
     display: flex;
     flex-direction: column;
     text-align: left;
     margin-bottom: 10px;
+
+}
+.modal-div-coment{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.modal-div-checkbox{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 30px;
 }
 .label-name{ 
     font-size: 12px;
@@ -234,35 +249,31 @@ textarea{
     clip-path: inset(50%);
     margin: -1px;
 }
+.modal-input:checked + .coment-svg{
+    border:transparent;
+    box-shadow: none;
+    background-color: var(--accent-color);
+    fill: var(--main-background-color);
+}
 .modal-label-text{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: var(--primary-text-color);
 
 }
 
 .coment-svg{
-    position: absolute;
-    display: inline-block;
-    border:1px solid var(--title-text-color);
-    background-color: #FFFFFF;
+    width: 16px;
+    height: 15px;
+    border-radius: 4px;
+    border: 2px solid var(--title-text-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 8.38px;
+    fill: transparent;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),fill 250ms cubic-bezier(0.4, 0, 0.2, 1),box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
-.coment-svg:focus,
-.coment-svg:hover{
-    background-color: var(--accent-color);
-    box-shadow: none;
-    background-origin: border-box;
-    border-color: var(--accent-color);
-
-}
 .dogovor{
     font-size: 14px;
     line-height: 1.71;
@@ -287,6 +298,7 @@ textarea{
     border-radius: 4px;
     margin-bottom: 0px;
     transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 
 
 }
